@@ -1,0 +1,22 @@
+img(1:200,1:200,1:3)=255;
+img=uint8(img);
+for i=0:50
+    j=sqrt(2500-i*i);
+    j=round(j);
+    k=50-i;
+    l=sqrt(2500-k*k);
+    l=round(l);
+    x=i+100;
+    y=j+100;
+    u=i+50;
+    v=l+100;
+    j1=-j;
+    y1=j1+100;
+    l1=-l;
+    v1=l1+100;
+    img(u,v1,1:3)=0;
+    img(x,y1,1:3)=0;
+    img(x,y,1:3)=0;
+    img(u,v,1:3)=0;
+end
+imshow(img)
